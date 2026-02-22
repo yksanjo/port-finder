@@ -1,60 +1,84 @@
-# Port Finder
+# port-finder
 
-Find available ports in a range for your development servers.
+## Detailed Description
 
-## Installation
+port-finder is maintained as an industry-grade software project with production-ready engineering practices.  
+This repository includes documented setup, quality gates, operational guidance, and governance standards so contributors can safely build, test, and ship changes with confidence.
+
+## Problem Statement
+
+Describe the user or business problem this project solves, the target users, and expected outcomes.
+
+## Solution Overview
+
+Summarize the architecture, core modules, and runtime behavior at a high level.
+
+## Key Features
+
+- Clear project scope and intended use.
+- Reproducible local development workflow.
+- Test coverage and CI quality gates.
+- Security and contribution policies.
+- Deployment-ready repository structure.
+
+## Repository Structure
+
+```text
+.
+|-- src/                  # Core implementation
+|-- tests/                # Automated test suites
+|-- docs/                 # Design notes and operational docs
+|-- .github/workflows/    # CI pipelines
+|-- README.md
+|-- LICENSE
+|-- CONTRIBUTING.md
+|-- SECURITY.md
+|-- CODE_OF_CONDUCT.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Git
+- Project runtime/toolchain for this repo
+
+### Local Setup
 
 ```bash
-cd port-finder
-npm install
+npm ci
+npm run lint
+npm test
+npm run build
 ```
 
 ## Usage
 
-### Find available ports
+Document primary commands, API routes, CLI examples, or UI workflows here.
 
-```bash
-npm start find
-```
+## Quality Standards
 
-### Find next available port
+- CI must pass before merge.
+- Changes require tests for critical behavior.
+- Security-sensitive changes should include risk notes.
+- Keep pull requests focused and reviewable.
 
-```bash
-npm start next 3000
-```
+## Security
 
-### Find port for framework
+See `SECURITY.md` for responsible disclosure and handling guidelines.
 
-```bash
-npm start framework react-vite
-npm start framework nextjs
-npm start framework express
-```
+## Contributing
 
-### List all frameworks
+See `CONTRIBUTING.md` for branching, commit, and pull request expectations.
 
-```bash
-npm start list
-```
+## Roadmap
 
-### Check specific port
+Track upcoming milestones, technical debt, and planned feature work.
 
-```bash
-npm start check 3000
-```
+## Support
 
-## Commands
+Open a GitHub issue for bugs, feature requests, or documentation gaps.
 
-| Command | Description |
-|---------|-------------|
-| `find` | Find available ports in range |
-| `next <port>` | Find next available port |
-| `framework <name>` | Find port for framework |
-| `list` | List framework recommendations |
-| `check <port>` | Check if port is available |
+## License
 
-## Options
-
-- `-s, --start <port>` - Start port
-- `-e, --end <port>` - End port
-- `-c, --count <number>` - Number of ports to find
+This project is released under the MIT License.
